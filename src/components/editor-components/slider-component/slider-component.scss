@@ -1,0 +1,105 @@
+@import '../../../styles/constants.scss';
+
+.SliderComponent {
+	display: flex;
+	justify-content: space-between;
+	align-items: stretch;
+	margin:  0;
+	margin: 0 0 20px;
+	min-height: 30px;
+
+	&-label {
+		margin: 0;
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		cursor: pointer;
+		user-select: none;
+	}
+
+	&-input {
+		background-color: $color-white;
+	    padding: 4px 6px;
+	    -webkit-appearance: none;
+	    outline: none;
+	    box-shadow: none;
+	    border: 0;
+	    color: $color-black;
+	}
+
+	.horizontal-slider {
+	  width: 100%;
+	  max-width: 500px;
+	  height: 50px;
+	  border: 1px solid grey;
+	}
+
+	.vertical-slider {
+	  height: 380px;
+	  width: 50px;
+	  border: 1px solid grey;
+	}
+
+	.handle {
+	  font-size: 0.9em;
+    text-align: center;
+    background-color: $color-orange;
+    color: $color-white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 30px;
+    justify-content: center;
+	}
+
+	.handle.active {
+	  background-color: $color-white;
+    color: $color-black;
+	}
+
+	.bar {
+	  position: relative;
+	  background: $color-white;
+	  top: 50%;
+		height: 4px;
+    transform: translateY(-50%);
+	}
+
+	.bar.bar-1 {
+	  background: $color-orange;
+	}
+
+	.bar.bar-2 {
+	  background: $color-white;
+	}
+
+	.horizontal-slider .bar {
+	  top: 20px;
+	  height: 10px;
+	}
+
+	.horizontal-slider .handle {
+	  top: 1px;
+	  width: 50px;
+	  height: 48px;
+	  line-height: 48px;
+	}
+
+	.vertical-slider .handle {
+	  left: 1px;
+	  width: 48px;
+	  line-height: 50px;
+	}
+
+	.vertical-slider .bar {
+	  left: 20px;
+	  width: 10px;
+	}
+
+	#horizontal-0,
+	#horizontal-1, #horizontal-2, #horizontal-3,
+	#vertical {
+	  margin: 20px 10px;
+	}
+}

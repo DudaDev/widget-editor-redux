@@ -5,11 +5,11 @@ const TOGGLE_SECTION_STATE = 'TOGGLE_SECTION_STATE';
 const SELECT_TAB = 'SELECT_TAB';
 
 const initialState = {
-  isOpen : true,
+  isOpen : false,
   title: 'Widget Editor',
   sections: [{
     title: 'Settings',
-    collapsed: false,
+    collapsed: true,
     components: [{
       id: 'SettingsComponent#1',
       type: 'input',
@@ -17,7 +17,7 @@ const initialState = {
       onChange (e) {}
     }, {
       id: 'SettingsComponent#2',
-      type: 'input',
+      type: 'slider',
       label: 'Name'
     }, {
       id: 'SettingsComponent#3',

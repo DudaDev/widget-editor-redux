@@ -1,7 +1,11 @@
 import React from 'react';
-import
-  InputComponent from '../editor-components/input-component/input-component';
 import SectionTitle from '../editor-section-title/editor-section-title'
+
+import InputComponent from
+  '../editor-components/input-component/input-component';
+import SliderComponent from
+  '../editor-components/slider-component/slider-component';
+
 import './editor-section.scss'
 
 export default class EditorSection extends React.Component {
@@ -18,6 +22,10 @@ export default class EditorSection extends React.Component {
       switch (component.type) {
         case 'input':
           return <InputComponent
+          key={i}
+          component={component} />
+        case 'slider':
+          return <SliderComponent
           key={i}
           component={component} />
       }
