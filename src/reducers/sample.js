@@ -5,9 +5,14 @@ import { createReducer } from 'utils';
 // the constant here.
 const SAMPLE_ACTION = 'SAMPLE_ACTION';
 const initialState  = {
-  message : 'Welcome to the React Redux Starter Kit!'
+  message : 'Welcome to the React Redux Starter Kit!',
+  editor : {
+    leftPanel : {
+      state : 'open'
+    }
+  }
 };
 
 export default createReducer(initialState, {
-  [SAMPLE_ACTION] : (state, payload) => state // aka noop
+  [SAMPLE_ACTION] : (state, payload) => !state // aka noop
 });

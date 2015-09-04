@@ -1,4 +1,4 @@
-import React  from 'react';
+import React from 'react';
 import './core-layout.scss';
 
 export default class CoreLayout extends React.Component {

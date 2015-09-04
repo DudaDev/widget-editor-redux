@@ -17,8 +17,10 @@ export default class ClientApp extends React.Component {
 
   renderDevTools () {
     return (
-      <DebugPanel top left bottom key='debugPanel'>
-        <DevTools store={store} monitor={LogMonitor} />
+      <DebugPanel top right bottom key='debugPanel'>
+        <DevTools
+          store={store}
+          monitor={LogMonitor} />
       </DebugPanel>
     );
   }
