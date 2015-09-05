@@ -9,8 +9,7 @@ export default class WidgetEditor extends React.Component {
     const editor = this.props.editor;
     const clsNm = editor.isOpen ? 'WidgetEditor open' : 'WidgetEditor';
     const sections = editor.sections.map((section, i) => {
-      return <EditorSection key={i}
-        section={section} />
+      return <EditorSection key={i} section={section} />
     });
 
     return (

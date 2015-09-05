@@ -1,12 +1,13 @@
 @import '../../../styles/constants.scss';
 
-.InputComponent {
+.TextareaComponent {
 	display: flex;
 	flex-grow: 1;
 	margin:  0;
 	min-height: 30px;
+	min-height: 96px;
 
-	&-input {
+	&-textarea {
 		flex-grow: 1;
 		background-color: $color-white;
 	    padding: 4px 6px;

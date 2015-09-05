@@ -5,6 +5,7 @@
 	z-index: 999;
 	left: 0;
 	top: 0;
+  cursor: pointer;
 }
 
 /* 
@@ -16,7 +17,7 @@
   width: 40px;
   transform: scale(0.7);
   box-sizing: content-box;
-  background-color: $color-black;
+  background-color: $color-black-darker;
 }
 
 .nav-icon:after, 

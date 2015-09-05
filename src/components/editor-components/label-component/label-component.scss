@@ -1,0 +1,26 @@
+@import '../../../styles/constants.scss';
+
+.LabelComponent {
+	margin: 0;
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 100%;
+	user-select: none;
+	padding-bottom: 8px;
+
+	label {
+		color: $color-orange;
+		user-select: none;
+		cursor: pointer;
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+
+		&[for] {
+			cursor: pointer;
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+		}
+	}
+}

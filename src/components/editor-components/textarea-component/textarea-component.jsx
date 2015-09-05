@@ -1,7 +1,7 @@
 import React from 'react';
-import './input-component.scss'
+import './textarea-component.scss'
 
-export default class InputComponent extends React.Component {
+export default class TextareaComponent extends React.Component {
   constructor (props) {
     super(props);
     this.state = { value: props.value };
@@ -9,8 +9,8 @@ export default class InputComponent extends React.Component {
 
   render () {
     return (
-      <div className="InputComponent">
-        <input className="InputComponent-input"
+      <div className="TextareaComponent">
+        <textarea className="TextareaComponent-textarea"
           id={this.props.id}
           value={this.state.value}
           placeholder={this.props.placeholder}
@@ -28,7 +28,7 @@ export default class InputComponent extends React.Component {
   }
 }
 
-InputComponent.propTypes = {
+TextareaComponent.propTypes = {
   id: React.PropTypes.string.isRequired,
   placeholder: React.PropTypes.string,
   value: React.PropTypes.string,
@@ -38,7 +38,7 @@ InputComponent.propTypes = {
   onKeyDown: React.PropTypes.func
 };
 
-InputComponent.defaultProps = {
+TextareaComponent.defaultProps = {
   placeholder: '',
   value: '',
   onChange: () => {},

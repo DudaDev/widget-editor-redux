@@ -1,6 +1,18 @@
 @import '../../styles/constants.scss';
+.ComponentBundler {
+	padding-bottom: 20px;
 
-.EditorSection {
+	&:last-child { padding-bottom: 0; }
+
+	&-title {
+		color: $color-orange;
+		user-select: none;
+		cursor: pointer;
+		margin: 0;
+		padding: 20px;
+		display: flex;
+		justify-content: space-between;
+	}
 
 	&-components {
 		padding: 20px;
@@ -10,7 +22,7 @@
 
 	&--collapsed {
 		
-		.ComponentBundler {
+		.EditorSection {
 
 			&-components { 
 				display: none;

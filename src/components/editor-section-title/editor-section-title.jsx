@@ -24,3 +24,15 @@ export default class EditorSectionTitle extends React.Component {
     }
   }
 }
+
+EditorSectionTitle.propTypes = {
+  handleClick: React.PropTypes.func,
+  title: React.PropTypes.string
+};
+
+EditorSectionTitle.defaultProps = {
+  editor: {
+    handleClick: () => {},
+    title: 'Section Title'
+  }
+};

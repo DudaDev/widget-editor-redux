@@ -13,33 +13,37 @@ const initialState = {
     components: [{
       id: 'SettingsComponent#1',
       type: 'input',
-      label: 'Title',
-      onChange (e) {}
+      placeholder: 'Placeholder',
+      label: {
+        id: 'SettingsComponent#1',
+        text: 'Title',
+        layout: 'Row'
+      }
+    }, {
+      id: 'SettingsComponent#3',
+      type: 'textarea',
+      placeholder: 'Placeholder',
+      label: {
+        id: 'SettingsComponent#3',
+        text: 'Other Stuff'
+      }
     }, {
       id: 'SettingsComponent#2',
       type: 'slider',
-      label: 'Name'
-    }, {
-      id: 'SettingsComponent#3',
-      type: 'input',
-      label: 'Other Stuff'
+      label: {
+        id: 'SettingsComponent#2',
+        text: 'Slider',
+        linkLabel: false
+      }
     }]
   }, {
     title: 'Design',
     collapsed: true,
-    components: [{
-      id: 'DesignComponent#4',
-      type: 'input',
-      label: 'Title'
-    }]
+    components: []
   }, {
     title: 'Advanced',
     collapsed: true,
-    components: [{
-      id: 'DesignComponent#4',
-      type: 'input',
-      label: 'Title'
-    }]
+    components: []
   }]
 };
 

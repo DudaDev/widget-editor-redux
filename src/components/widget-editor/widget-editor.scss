@@ -1,27 +1,28 @@
 @import '../../styles/constants.scss';
 
 .WidgetEditor {
-	height: 100%;
+	min-height: 100%;
 	width: 33%;
-	max-width: 460px;
+	max-width: 500px;
 	position: absolute;
 	background: $color-black;
 	color: $color-white;
 	left: 0;
 	top: 0;
-	transform: translateX(-100%);
+	transform: scale(0);
+	transform-origin: 20px 20px;
 	transition: all 0.4s ease-in-out;
 
+	&.open {
+		transform: scale(1);
+	}
+	
 	&-title {
 		border-bottom: 1px solid $color-orange;
-		background-color: $color-black;
+		background-color: $color-black-darker;
 		margin: 0;
 		padding: 20px 20px 20px 60px;
 		color: $color-white;
 		margin-bottom: 20px;
-	}
-
-	&.open {
-		transform: translateX(0px);
 	}
 }

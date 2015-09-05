@@ -1,10 +1,8 @@
 @import '../../styles/constants.scss';
 
 .EditorSection {
-    display: flex;
-    flex-direction: column;
 
-	&-title {
+    &-title {
 		color: $color-orange;
 		user-select: none;
 		cursor: pointer;
@@ -12,6 +10,11 @@
 		padding: 20px;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
+
+		.glyphicon {
+			font-size: 14px;
+		}
 	}
 
 	&-components {

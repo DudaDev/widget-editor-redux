@@ -28,3 +28,15 @@ export default class Toggler extends React.Component {
     }
   }
 }
+
+Toggler.propTypes = {
+  isOpen: React.PropTypes.bool,
+  onClick: React.PropTypes.func
+};
+
+Toggler.defaultProps = {
+  editor: {
+    sections: () => {},
+    isOpen: false
+  }
+};
