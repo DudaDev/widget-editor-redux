@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Tab from '../editor-tab/editor-tab';
 import EditorSection from '../editor-section/editor-section';
 import './widget-editor.scss'
 
