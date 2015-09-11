@@ -1,33 +1,16 @@
 @import '../../styles/constants.scss';
 
-.EditorSection {
+.EditorSectionTitle {
+	color: $color-orange;
+	user-select: none;
+	cursor: pointer;
+	margin: 0;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-    &-title {
-		color: $color-orange;
-		user-select: none;
-		cursor: pointer;
-		margin: 0;
-		padding: 20px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-
-		.glyphicon {
-			font-size: 14px;
-		}
-	}
-
-	&-components {
-		padding: 0 20px;
-	}
-
-	&--collapsed {
-		
-		.EditorSection {
-
-			&-components { 
-				display: none;
-			}
-		}
+	.glyphicon {
+		font-size: 14px;
 	}
 }

@@ -1,14 +1,9 @@
 import React from 'react';
-import LabelComponent from
-  '../editor-components/label-component/label-component';
-import InputComponent from
-  '../editor-components/input-component/input-component';
-import SliderComponent from
-  '../editor-components/slider-component/slider-component';
-import TextareaComponent from
-  '../editor-components/textarea-component/textarea-component';
+import LabelComponent from '../editor-components/label-component';
+import InputComponent from '../editor-components/input-component';
+import SliderComponent from '../editor-components/slider-component';
+import TextareaComponent from '../editor-components/textarea-component';
 import './component-bundler.scss'
-
 
 export default class ComponentBundler extends React.Component {
 

@@ -1,0 +1,6 @@
+{
+  "name": "textarea-component",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./textarea-component.jsx"
+}

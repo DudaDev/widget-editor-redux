@@ -3,33 +3,48 @@ import { connect } from 'react-redux';
 import EditorSection from '../editor-section/editor-section';
 import './widget-editor.scss'
 
+@connect(state => ({
+  editor : state.editor
+}))
 export default class WidgetEditor extends React.Component {
 	render () {
-    const editor = this.props.editor;
-    const clsNm = editor.isOpen ? 'WidgetEditor open' : 'WidgetEditor';
-    const sections = editor.sections.map((section, i) => {
-      return <EditorSection key={i} section={section} />
+    const clsNm = this.props.isOpen ? 'WidgetEditor open' : 'WidgetEditor';
+    const sections = this.props.sections.map((section, i) => {
+      return <EditorSection key={i}
+        index={i}
+        collapsed={section.collapsed}
+        title={section.title}
+        components={section.components}
+        toggleSection={index => this.toggleSection(section, index)} />
     });
 
     return (
       <div className={clsNm}>
-        <h1 className="WidgetEditor-title">{ editor.title }</h1>
+        <h1 className="WidgetEditor-title">{ this.props.title }</h1>
         { sections }
       </div>
     );
   }
+
+  toggleSection (section, index) {
+    this.props.dispatch({
+      type: 'TOGGLE_SECTION_STATE',
+      payload: {
+        collapsed: !section.collapsed,
+        index
+      }
+    });
+  }
 }
 
 WidgetEditor.propTypes = {
-  editor: React.PropTypes.shape({
-    sections: React.PropTypes.array,
-    title: React.PropTypes.string
-  })
+  isOpen: React.PropTypes.bool,
+  title: React.PropTypes.string,
+  sections: React.PropTypes.array
 };
 
 WidgetEditor.defaultProps = {
-  editor: {
-    sections: [],
-    title: 'Widget Editor'
-  }
+  isOpen: false,
+  title: 'Widget Editor',
+  sections: []
 };

@@ -2,19 +2,23 @@
 
 .WidgetEditor {
 	min-height: 100%;
-	width: 33%;
-	max-width: 500px;
+	width: 100%;
+	min-width: 300px;
 	position: absolute;
 	background: $color-black;
 	color: $color-white;
 	left: 0;
 	top: 0;
-	transform: scale(0);
+	transform: scale(0.8);
+	opacity: 0;
 	transform-origin: 20px 20px;
 	transition: all 0.4s ease-in-out;
+	pointer-events: none;
 
 	&.open {
 		transform: scale(1);
+		opacity: 1;
+	    pointer-events: all;
 	}
 	
 	&-title {

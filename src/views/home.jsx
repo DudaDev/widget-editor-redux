@@ -7,32 +7,20 @@ import WidgetEditor from '../components/widget-editor/widget-editor';
   editor : state.editor
 }))
 export default class HomeView extends React.Component {
-  constructor () {
-    super();
-  }
-
   render () {
     const action = {
       type: 'TOGGLE_EDITOR_STATE',
-      isOpen: this.props.editor.isOpen
+      payload: {
+        isOpen: !this.props.editor.isOpen
+      }
     };
 
     return (
       <div className='view view--home container'>
-        <Toggler isOpen={action.isOpen}
+        <Toggler isOpen={this.props.editor.isOpen}
           onClick={e => this.props.dispatch(action)} />
-        <WidgetEditor editor={this.props.editor}  />
+        <WidgetEditor {...this.props.editor}  />
       </div>
     );
   }
 }
-
-HomeView.propTypes = {
-  dispatch: React.PropTypes.func.isRequired,
-  editor: React.PropTypes.object.isRequired
-};
-
-HomeView.defaultProps = {
-  dispatch: () => {},
-  editor: {}
-};

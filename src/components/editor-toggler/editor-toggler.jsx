@@ -15,6 +15,7 @@ export default class Toggler extends React.Component {
   }
 
   handleClick (e) {
+    e.stopPropagation();
     this.props.onClick(e);
   }
 
@@ -31,12 +32,9 @@ export default class Toggler extends React.Component {
 
 Toggler.propTypes = {
   isOpen: React.PropTypes.bool,
-  onClick: React.PropTypes.func
+  onClick: React.PropTypes.func.isRequired
 };
 
 Toggler.defaultProps = {
-  editor: {
-    sections: () => {},
-    isOpen: false
-  }
+  isOpen: false
 };

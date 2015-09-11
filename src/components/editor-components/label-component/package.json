@@ -1,0 +1,6 @@
+{
+  "name": "label-component",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./label-component.jsx"
+}

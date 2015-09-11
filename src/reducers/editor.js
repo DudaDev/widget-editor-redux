@@ -5,7 +5,7 @@ const TOGGLE_SECTION_STATE = 'TOGGLE_SECTION_STATE';
 const SELECT_TAB = 'SELECT_TAB';
 
 const initialState = {
-  isOpen : false,
+  isOpen : true,
   title: 'Widget Editor',
   sections: [{
     title: 'Settings',
@@ -48,10 +48,14 @@ const initialState = {
 };
 
 export default createReducer(initialState, {
-  [TOGGLE_EDITOR_STATE] : (state) => {
-    return { ...state, isOpen : !state.isOpen };
+  TOGGLE_EDITOR_STATE : (editor, payload) => {
+    return { ...editor, isOpen : payload.isOpen };
   },
-  [TOGGLE_SECTION_STATE] : (state) => {
-    return { ...state, isOpen : !state.collapsed };
+  TOGGLE_SECTION_STATE : (editor, payload) => {
+    var sections = [...editor.sections];
+
+    sections[payload.index].collapsed = payload.collapsed;
+
+    return { ...editor, sections : sections };
   }
 });

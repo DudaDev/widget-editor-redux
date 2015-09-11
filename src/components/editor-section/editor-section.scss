@@ -3,17 +3,22 @@
 .EditorSection {
 
 	&-components {
-		padding: 20px;
+		overflow: hidden;
     	background-color: $color-black-darker;
     	box-shadow: $shadow-soft-inset;
+    	transition: all 0.6s ease;
+
+    	> div {
+    		padding: 20px;
+    	}
 	}
 
 	&--collapsed {
 		
-		.ComponentBundler {
+		.EditorSection {
 
 			&-components { 
-				display: none;
+				height: 0;
 			}
 		}
 	}

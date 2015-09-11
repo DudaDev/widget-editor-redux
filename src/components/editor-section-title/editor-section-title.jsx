@@ -4,13 +4,12 @@ import './editor-section-title.scss'
 export default class EditorSectionTitle extends React.Component {
 
   render () {
-    const props = this.props;
     const sctionTitleIcon = this.getSectionTitleIcon();
 
     return (
-      <h3 className='EditorSection-title'
-        onClick={e => props.handleClick(e)}>
-        <span>{props.title}</span>
+      <h3 className='EditorSectionTitle'
+        onClick={e => this.props.toggleSection(e)}>
+        <span>{this.props.title}</span>
         <span className={sctionTitleIcon}></span>
       </h3>
     );
@@ -27,12 +26,12 @@ export default class EditorSectionTitle extends React.Component {
 
 EditorSectionTitle.propTypes = {
   handleClick: React.PropTypes.func,
-  title: React.PropTypes.string
+  title: React.PropTypes.string,
+  collapsed: React.PropTypes.bool
 };
 
 EditorSectionTitle.defaultProps = {
-  editor: {
-    handleClick: () => {},
-    title: 'Section Title'
-  }
+  handleClick: () => {},
+  title: 'Section Title',
+  collapsed: true
 };
